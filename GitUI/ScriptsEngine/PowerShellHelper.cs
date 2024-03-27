@@ -7,7 +7,7 @@ namespace GitUI.ScriptsEngine
     {
         internal static void RunPowerShell(string command, string? argument, string workingDir, bool runInBackground)
         {
-            const string filename = "powershell.exe";
+            const string filename = "pwsh.exe";
             string arguments = (runInBackground ? "" : "-NoExit") + " -ExecutionPolicy Unrestricted -Command \"" + command + " " + argument + "\"";
             EnvironmentConfiguration.SetEnvironmentVariables();
 
